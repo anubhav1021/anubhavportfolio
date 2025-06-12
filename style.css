@@ -30,7 +30,7 @@ body {
   font-size: 25px;
   color: black;
   background-color: lightpink;
-  font-family: cursive;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #myphoto {
