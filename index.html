@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anubhav's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="scroll-fade">
+    <div id="firstdiv">
+      <h1>WELCOME</h1>
+      <p id="intro1">Hi, I’m ANUBHAV PUNIA — a B.Tech student passionate about Software Development & Tech
+        Learning Java, C++, and Web Dev | Future Software Engineer | Building cool things at Bennett University</p>
+    </div>
+  </header>
+
+  <div id="nextdiv" class="scroll-fade">
+    <img id="myphoto" src="newphoto.JPG" alt="here is my photo">
+    <div>
+      <h1 id="shortbio">SHORT BIO</h1>
+      <p id="line">I’m a 2nd year B.Tech student at Bennett University, currently exploring backend development, databases, and C++ programming.</p>
+      <p id="line">
+        Programming: Java, Python, C++<br>
+        Web: HTML, CSS, JavaScript (basic)<br>
+        Tools: IntelliJ, MySQL, Git, Android Studio (beginner)
+      </p>
+    </div>
+  </div>
+
+  <section id="education" class="scroll-fade">
+    <h2>EDUCATION</h2>
+
+    <div class="edu-block">
+        <img src="opsgohava.webp" alt="OM Public School">
+        <div class="edu-text">
+            <h3>OM Public School, Sonipat</h3>
+            <p>Completed CBSE Class 12 (Science) – 2024<br>
+            Percentage: 90%</p>
+        </div>
+    </div>
+
+    <div class="edu-block">
+        <img src="bennettimg.webp" alt="Bennett University">
+        <div class="edu-text">
+            <h3>Bennett University, Greater Noida</h3>
+            <p>Bachelor of Technology (B.Tech) in Computer Science Engineering<br>
+            Duration: 2028<br>
+            Current Year: 2nd Year<br>
+            CGPA: 9.86/10<br>
+            Relevant Courses: Data Structures, OOP in Java, DBMS</p>
+        </div>
+    </div>
+
+    <div class="certification-block">
+        <h3>Certifications:</h3>
+        <ul>
+            <li>Python Programming – Infosys Springboard (11 hours)</li>
+            <li>SQL Basics – HackerRank</li>
+        </ul>
+    </div>
+</section>
+
+<div id="projects" class="scroll-fade">
+  <h1 id="projects-heading">My Projects</h1>
+  <div class="projects-container">
+    <div class="project-card">
+      <img src="passgen.png" alt="Project 1">
+      <h2>Random Password Generator</h2>
+      <p>Python-based GUI app with clipboard integration to create strong passwords.</p>
+      <a href="https://github.com" target="_blank">View on GitHub</a>
+    </div>
+    <div class="project-card">
+      <img src="billingsys.png" alt="Project 2">
+      <h2>Electricity Billing System</h2>
+      <p>A desktop application using Java Swing and MySQL to manage bills and customer data.</p>
+      <a href="https://github.com" target="_blank">View on GitHub</a>
+    </div>
+    <div class="project-card">
+      <img src="tictao.png" alt="Project 3">
+      <h2>Tic-Tac-Toe</h2>
+      <p>A C++ two-player game using OOP, featuring a 3x3 board and file handling for saving data.</p>
+      <a href="https://github.com" target="_blank">View on GitHub</a>
+    </div>
+  </div>
+</div>
+
+<section id="contact" class="scroll-fade">
+  <h2>Contact Me</h2>
+  <div class="contact-links">
+    <a href="https://www.linkedin.com/in/anubhav-punia-572ab0334" target="_blank">
+      <img src="linkedin-svgrepo-com.svg" alt="LinkedIn">LinkedIn
+    </a>
+    <a href="https://wa.me/918816959800?text=Hi%2C%20I%20want%20to%20contact%20you." target="_blank">
+      <img src="whatsapp-fill-svgrepo-com.svg" alt="WhatsApp">WhatsApp
+    </a>
+    <a href="https://github.com" target="_blank">
+      <img src="reshot-icon-github-NY46M9DGFU.svg" alt="GitHub">GitHub
+    </a>
+    <a href="mailto:anubhavpunia4u@gmail.com">
+      <img src="reshot-icon-email-P9WA8LS724.svg" alt="Email">Email
+    </a>
+  </div>
+</section>
+
+<script>
+  // Intersection Observer for scroll animation
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("fade-in-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.scroll-fade').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

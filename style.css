@@ -1,0 +1,237 @@
+/* General Fade Animation */
+.scroll-fade {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Existing Styles */
+body {
+  background: rgb(201, 201, 201);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#firstdiv {
+  background-color: rgb(252, 223, 191);
+  color: coral;
+  text-align: center;
+  text-decoration: underline;
+  padding: 20px;
+}
+
+#intro1 {
+  font-size: 25px;
+  color: black;
+  background-color: lightpink;
+  font-family: cursive;
+}
+
+#myphoto {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+#myphoto:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+#nextdiv {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #e9ab2d;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+#shortbio {
+  color: rgb(173, 74, 21);
+  font-style: oblique;
+  font-family: 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+}
+
+#line {
+  font-size: 20px;
+  font-family: Impact, sans-serif;
+}
+
+#education {
+  background-color: #edae30;
+  padding: 40px;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  color: brown;
+  font-size: 2.5em;
+  font-style: italic;
+}
+
+.edu-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.edu-block img {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 10px;
+}
+
+.edu-text {
+  margin-top: 15px;
+  text-align: center;
+  color: #000;
+}
+
+.certification-block {
+  background-color: #fff5e0;
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+#projects {
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+#projects-heading {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: yellow;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.project-card {
+  background-color: #2e2e2e;
+  border-radius: 10px;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.project-card h2 {
+  font-size: 22px;
+  margin: 10px 0;
+}
+.project-card p {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+.project-card a {
+  text-decoration: none;
+  color: #00ffff;
+  font-weight: bold;
+}
+.project-card img {
+  width: 100%;
+  max-height: 200px; /* Controls vertical size without cropping */
+  object-fit: contain; /* Ensures the full image is visible */
+  border-radius: 8px;
+  margin-bottom: 15px;
+  background-color: white; /* Optional: Makes transparent images visible */
+}
+
+#contact {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  text-align: center;
+}
+#contact h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.contact-links a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+  position: relative;
+}
+.contact-links a:hover {
+  color: #0077b5;
+}
+.contact-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #0077b5;
+  transition: width 0.3s ease;
+}
+.contact-links a:hover::after {
+  width: 100%;
+}
+.contact-links img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+  #educationcontent,
+  #nextdiv {
+    flex-direction: column;
+    align-items: center;
+  }
+  #combinedimg,
+  #myphoto {
+    width: 90vw;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  #intro1 {
+    font-size: 20px;
+    text-align: center;
+  }
+}
